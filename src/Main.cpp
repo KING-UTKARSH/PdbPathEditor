@@ -20,7 +20,7 @@ static bool GetPEAndPdb(const std::wstring& filePath, std::vector<char>& PEData,
         return false;
     }
 
-    std::streamsize size = file.tellg();
+    size_t size = file.tellg();
     file.seekg(0, std::ios::beg);
 
     std::vector<char> buffer(size);
